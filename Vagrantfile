@@ -26,3 +26,5 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         config.vm.provision "shell", path: afterScriptPath
     end
 end
+
+require path + '/scripts/homestead-vaprobash-scripts/vaprobash.rb'

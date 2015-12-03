@@ -1,0 +1,3 @@
+[submodule "scripts/homestead-vaprobash-scripts"]
+	path = scripts/homestead-vaprobash-scripts
+	url = https://github.com/kaamaru/Homestead-Vaprobash-Scripts.git
