@@ -8,8 +8,9 @@ homesteadYamlPath = confDir + "/Homestead.yaml"
 homesteadJsonPath = confDir + "/Homestead.json"
 afterScriptPath = confDir + "/after.sh"
 aliasesPath = confDir + "/aliases"
+path = File.dirname(__FILE__)
 
-require File.expand_path(File.dirname(__FILE__) + '/scripts/homestead.rb')
+require File.expand_path(path + '/scripts/homestead.rb')
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     if File.exists? aliasesPath then
@@ -27,4 +28,4 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     end
 end
 
-require path + '/scripts/homestead-vaprobash-scripts/vaprobash.rb'
+require File.expand_path(path + '/scripts/homestead-vaprobash-scripts/vaprobash.rb')
